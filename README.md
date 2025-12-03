@@ -14,7 +14,7 @@ go run ./server \
 ### Terminal 2 – Follower 1
 
 ```bash
-o run ./server \
+go run ./server \
   -id f1 \
   -role follower \
   -port 50052 \
