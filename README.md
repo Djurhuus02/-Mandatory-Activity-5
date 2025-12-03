@@ -21,14 +21,6 @@ o run ./server \
   -peers 127.0.0.1:50051,127.0.0.1:50053 \
   -leader_addr 127.0.0.1:50051 \
   -can_promote=true
-
-# vanlig follower
-go run ./server \
-  -id f2 \
-  -role follower \
-  -port 50053 \
-  -peers 127.0.0.1:50051,127.0.0.1:50052 \
-  -leader_addr 127.0.0.1:50051
 ```
 
 ### Terminal 3 – Follower 2
@@ -43,7 +35,7 @@ go run ./server \
 
 ```
 
-### Client – place a bid (can be run in a fourth terminal)
+### Client – place a bid (can be run in a fourth terminal) (When leader is terminated change -addr=50052)
 
 ```bash
 go run ./client bid   -addr=127.0.0.1:50051   -auction_id=a1   -bidder_id=b1   -amount=10
