@@ -1,0 +1,8 @@
+Auction server l1 starting as leader on port 50051...
+Server l1 (leader) is listening on 127.0.0.1:50051
+[l1|leader] >>> Bid RPC reached: auction=a1 bidder=A amount=50
+[l1|leader] received Bid: auction=a1 bidder=A amount=50
+[l1|leader] replication result: ok=true msg=majority reached (3/3)
+[l1|leader] bid committed: highest_bid=50 highest_bidder=A
+[l1|leader] >>> Bid RPC reached: auction=a1 bidder=B amount=30
+[l1|leader] received Bid: auction=a1 bidder=B amount=30

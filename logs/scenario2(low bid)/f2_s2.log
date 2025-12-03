@@ -1,0 +1,4 @@
+Auction server f2 starting as follower on port 50053...
+Server f2 (follower) is listening on 127.0.0.1:50053
+[f2|follower] AppendBid from leader: auction=a1 bidder=A amount=50
+[f2|follower] state updated: highest_bid=50 highest_bidder=A

@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package Auction;
+
+option go_package = "github.com/andersgrangaard/Auction/grpc;auction";
+
+service Auction{
+    rpc Bid(BidRequest) returns (BidResponse);
+    rpc Result(ResultRequest) returns (ResultResponse);
+}
+
+enum BidOutcome{
+    BID_OUTCOME_UNSPECIFIED = 0;
+    SUCCESS = 1;
+    FAIL = 2;
+    EXCEPTION = 3;
+}
+message BidRequest{
+    string auction_id = 1;
+    string bidder_id = 2;
+    int64 amount = 3;
+}
+
+message BidResponse{
+    BidOutcome outcome = 1;
+    string message = 2;
+    int64 highest_bid = 3;
+    string highest_bidder_id = 4;
+}
+
+message ResultRequest{
+    string auction_id = 1;
+}
+
+message ResultResponse{
+    bool is_closed = 1;
+    int64 highest_bid = 2;
+    string winner_id = 3;
+    string message = 4;
+}

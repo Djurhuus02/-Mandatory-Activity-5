@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package Auction;
+
+option go_package = "github.com/andersgrangaard/Auction/grpc;auction";
+
+service Replication {
+    rpc AppendBid(AppendBidRequest) returns (AppendBidResponse);
+}
+
+message AppendBidRequest {
+    string auction_id = 1;
+    string bidder_id  = 2;
+    int64 amount      = 3;
+}
+
+message AppendBidResponse {
+    bool success = 1;
+    string message = 2;
+}
