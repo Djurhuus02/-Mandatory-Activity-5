@@ -41,8 +41,3 @@ go run ./server \
 go run ./client bid   -addr=127.0.0.1:50051   -auction_id=a1   -bidder_id=b1   -amount=10
 ```
 
-### Client – get result
-
-```bash
-go run ./client result   -addr=127.0.0.1:50051   -auction_id=a1
-```
